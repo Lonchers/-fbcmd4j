@@ -1,2 +1,11 @@
 *.class
 *.swp
+
+
+# Mobile tools for java #
+.mtj.tmp/
+
+# package files #
+*.jar
+*.war
+*.ear
