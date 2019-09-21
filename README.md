@@ -1,9 +1,18 @@
-bcmd4j
+# Ambiente De Desarollo
 
-Repositorio para evidencia final de Computacion en Java
+Facebook CLI client. For educational purposes only.
+Repositorio para Evidencia Final de Computacion en Java
 
-Instalacion TODO: Agregar proceso de instalacion
+## Instalación
 
-Creditos Jorge Ramon De Leon Elizondo
+@@ -12,8 +12,8 @@ TODO: Agregar instrucciones de uso
 
-Licencia MIT Licence
+## Créditos
+
+TODO: Agregar autor(es)
+Jorge Ramon De Leon Elizondo
+
+## Licencia
+
+TODO: Agregar Licencia
+MIT Licence
