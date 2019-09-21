@@ -4,7 +4,7 @@ Repositorio para Evidencia Final de Computacion en Java
 
 ## Instalación
 
-@@ -12,8 +12,8 @@ TODO: Agregar instrucciones de uso
+TODO: Agregar instrucciones de uso
 
 ## Créditos
 
