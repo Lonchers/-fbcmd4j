@@ -1,6 +1,5 @@
 # Ambiente De Desarollo
 
-Facebook CLI client. For educational purposes only.
 Repositorio para Evidencia Final de Computacion en Java
 
 ## Instalación
