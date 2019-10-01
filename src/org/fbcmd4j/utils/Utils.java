@@ -1,20 +1,16 @@
 package org.fbcmd4j.utils;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Scanner;
@@ -25,10 +21,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import facebook4j.Facebook;
-import facebook4j.FacebookException;
 import facebook4j.FacebookFactory;
 import facebook4j.auth.AccessToken;
-import facebook4j.Post;
 import facebook4j.internal.org.json.JSONObject;
 
 public class Utils {
@@ -164,60 +158,5 @@ public class Utils {
 			fb.setOAuthAccessToken(new AccessToken(props.getProperty("oauth.accessToken"), null));
 		
 		return fb;
-	}
-	
-	public static void printPost(Post p) {
-		if(p.getStory() != null)
-			System.out.println("Story: " + p.getStory());
-		if(p.getMessage() != null)
-			System.out.println("Mensaje: " + p.getMessage());
-		System.out.println("--------------------------------");
-	}
-	
-	public static void postStatus(String msg, Facebook fb) {
-		try {
-			fb.postStatusMessage(msg);
-		} catch (FacebookException e) {
-			logger.error(e);
-		}		
-	}
-	
-	public static void postLink(String link, Facebook fb) {
-		try {
-			fb.postLink(new URL(link));
-		} catch (MalformedURLException e) {
-			logger.error(e);
-		} catch (FacebookException e) {
-			logger.error(e);
-		}
-	}
-	
-	public static String savePostsToFile(String fileName, List<Post> posts) {
-		File file = new File(fileName + ".txt");
-
-		try {
-    		if(!file.exists()) {
-    			file.createNewFile();
-            }
-
-    		FileOutputStream fos = new FileOutputStream(file);
-			for (Post p : posts) {
-				String msg = "";
-				if(p.getStory() != null)
-					msg += "Story: " + p.getStory() + "\n";
-				if(p.getMessage() != null)
-					msg += "Mensaje: " + p.getMessage() + "\n";
-				msg += "--------------------------------\n";
-				fos.write(msg.getBytes());
-			}
-			fos.close();
-
-			logger.info("Posts guardados en el archivo '" + file.getName() + "'.");
-			System.out.println("Posts guardados exitosamente en '" + file.getName() + "'.");
-		} catch (IOException e) {
-			logger.error(e);
-		}
-        
-        return file.getName();
 	}	
 }

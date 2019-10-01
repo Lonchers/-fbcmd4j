@@ -1,9 +1,7 @@
 package org.fbcmd4j;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Properties;
 import java.util.Scanner;
 
@@ -12,9 +10,6 @@ import org.apache.logging.log4j.Logger;
 import org.fbcmd4j.utils.Utils;
 
 import facebook4j.Facebook;
-import facebook4j.FacebookException;
-import facebook4j.Post;
-import facebook4j.ResponseList;
 
 public class Main {
 	static final Logger logger = LogManager.getLogger(Main.class);
@@ -55,30 +50,16 @@ public class Main {
 						props = Utils.loadConfigFile(CONFIG_DIR, CONFIG_FILE);
 						break;
 					case 1:
-						System.out.println("Mostrando NewsFeed...");
-						ResponseList<Post> newsFeed = fb.getFeed();
-						for (Post p : newsFeed) {
-							Utils.printPost(p);
-						}
-						askToSaveFile("NewsFeed", newsFeed, scan);
+						System.out.println("Mostrar NewsFeed...");
 						break;
 					case 2:
-						System.out.println("Mostrando Wall...");
-						ResponseList<Post> wall = fb.getPosts();
-						for (Post p : wall) {
-							Utils.printPost(p);
-						}		
-						askToSaveFile("Wall", wall, scan);
+						System.out.println("Mostrar Wall...");
 						break;
 					case 3:
-						System.out.println("Escribe tu estado: ");
-						String estado = scan.nextLine();
-						Utils.postStatus(estado, fb);
+						System.out.println("Escribe tu estado...");
 						break;
 					case 4:
-						System.out.println("Ingresa el link: ");
-						String link = scan.nextLine();
-						Utils.postLink(link, fb);
+						System.out.println("Ingresa el link...");
 						break;
 					case 5:
 						System.out.println("Gracias por usar el cliente!");
@@ -90,9 +71,6 @@ public class Main {
 				} catch (InputMismatchException ex) {
 					System.out.println("Ocurrió un errror, favor de revisar log.");
 					logger.error("Opción inválida. %s. \n", ex.getClass());
-				} catch (FacebookException ex) {
-					System.out.println("Ocurrió un errror, favor de revisar log.");
-					logger.error(ex.getErrorMessage());
 				} catch (Exception ex) {
 					System.out.println("Ocurrió un errror, favor de revisar log.");
 					logger.error(ex);
@@ -101,36 +79,6 @@ public class Main {
 			}
 		} catch (Exception e) {
 			logger.error(e);
-		}
-	}
-	
-	public static void askToSaveFile(String fileName, ResponseList<Post> posts, Scanner scan) {
-		System.out.println("Guardar resultados en un archivo de texto? Si/No");
-		String option = scan.nextLine();
-		
-		if (option.contains("Si") || option.contains("si")) {
-			List<Post> ps = new ArrayList<>();
-			int n = 0;
-
-			while(n <= 0) {
-				try {
-					System.out.println("Cuántos posts deseas guardar?");
-					n = Integer.parseInt(scan.nextLine());					
-			
-					if(n <= 0) {
-						System.out.println("Favor de ingresar un número válido");
-					} else {
-						for(int i = 0; i<n; i++) {
-							if(i>posts.size()-1) break;
-							ps.add(posts.get(i));
-						}
-					}
-				} catch(NumberFormatException e) {
-					logger.error(e);
-				}
-			}
-
-			Utils.savePostsToFile(fileName, ps);
 		}
 	}
 }
