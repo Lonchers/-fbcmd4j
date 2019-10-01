@@ -1254,3 +1254,43 @@
 2017-05-01 22:32:12.790 [main] INFO  org.fbcmd4j.Main - Iniciando app
 2017-05-01 22:32:12.837 [main] INFO  org.fbcmd4j.Utils - La propiedad 'oauth.accessToken' está vacía
 2017-05-01 22:32:30.447 [main] INFO  org.fbcmd4j.Utils - Configuración guardada exitosamente.
+2017-05-01 22:38:44.245 [main] ERROR org.fbcmd4j.Main - (#200) Requires extended permission: read_stream
+2017-05-01 22:40:09.346 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-01 22:40:11.936 [main] ERROR org.fbcmd4j.Main - (#200) Requires extended permission: read_stream
+2017-05-01 22:55:35.979 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-01 22:56:09.258 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-01 22:56:19.052 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-01 22:59:11.011 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-01 23:04:22.140 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-01 23:07:00.494 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-01 23:07:42.280 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-01 23:08:07.000 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-01 23:10:15.869 [main] ERROR org.fbcmd4j.Main - (#200) Requires extended permission: read_stream
+2017-05-01 23:11:18.901 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-01 23:36:52.305 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-01 23:36:52.311 [main] INFO  org.fbcmd4j.Utils - Creando nuevo archivo de configuración.
+2017-05-01 23:36:52.360 [main] INFO  org.fbcmd4j.Utils - La propiedad 'oauth.accessToken' está vacía
+2017-05-01 23:36:54.965 [main] ERROR org.fbcmd4j.Main - An active access token must be used to query information about the current user.
+2017-05-01 23:37:46.238 [main] ERROR org.fbcmd4j.Main - An active access token must be used to query information about the current user.
+2017-05-01 23:37:57.731 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-01 23:37:57.777 [main] INFO  org.fbcmd4j.Utils - La propiedad 'oauth.accessToken' está vacía
+2017-05-01 23:37:59.785 [main] ERROR org.fbcmd4j.Main - An active access token must be used to query information about the current user.
+2017-05-01 23:38:37.343 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-01 23:38:37.389 [main] INFO  org.fbcmd4j.Utils - La propiedad 'oauth.accessToken' está vacía
+2017-05-01 23:38:39.817 [main] ERROR org.fbcmd4j.Main - An active access token must be used to query information about the current user.
+2017-05-01 23:38:53.836 [main] INFO  org.fbcmd4j.Utils - Configuración guardada exitosamente.
+2017-05-01 23:39:02.493 [main] ERROR org.fbcmd4j.Main - (#200) Requires extended permission: read_stream
+2017-05-01 23:41:46.165 [main] ERROR org.fbcmd4j.Main - (#200) Requires extended permission: read_stream
+2017-05-01 23:45:52.976 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-01 23:48:40.054 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-01 23:49:26.820 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-01 23:50:27.133 [main] INFO  org.fbcmd4j.Utils - Posts guardados en el archivo 'NewsFeed.txt'.
+2017-05-01 23:52:04.685 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-01 23:52:13.907 [main] INFO  org.fbcmd4j.Utils - Posts guardados en el archivo 'Wall.txt'.
+2017-05-01 23:52:52.698 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-01 23:52:57.180 [main] INFO  org.fbcmd4j.Utils - Posts guardados en el archivo 'NewsFeed.txt'.
+2017-05-02 00:05:31.181 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-02 00:05:47.789 [main] INFO  org.fbcmd4j.Utils - Posts guardados en el archivo 'NewsFeed.txt'.
+2017-05-02 00:40:12.054 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-02 00:40:39.485 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2017-05-02 00:41:53.110 [main] INFO  org.fbcmd4j.Main - Iniciando app
