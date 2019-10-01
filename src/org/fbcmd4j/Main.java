@@ -71,10 +71,14 @@ public class Main {
 						askToSaveFile("Wall", wall, scan);
 						break;
 					case 3:
-						System.out.println("Escribe tu estado...");
+						System.out.println("Escribe tu estado: ");
+						String estado = scan.nextLine();
+						Utils.postStatus(estado, fb);
 						break;
 					case 4:
-						System.out.println("Ingresa el link...");
+						System.out.println("Ingresa el link: ");
+						String link = scan.nextLine();
+						Utils.postLink(link, fb);
 						break;
 					case 5:
 						System.out.println("Gracias por usar el cliente!");

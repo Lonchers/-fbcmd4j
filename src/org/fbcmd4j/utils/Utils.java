@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.file.Files;
@@ -24,9 +25,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import facebook4j.Facebook;
+import facebook4j.FacebookException;
 import facebook4j.FacebookFactory;
-import facebook4j.Post;
 import facebook4j.auth.AccessToken;
+import facebook4j.Post;
 import facebook4j.internal.org.json.JSONObject;
 
 public class Utils {
@@ -172,6 +174,24 @@ public class Utils {
 		System.out.println("--------------------------------");
 	}
 	
+	public static void postStatus(String msg, Facebook fb) {
+		try {
+			fb.postStatusMessage(msg);
+		} catch (FacebookException e) {
+			logger.error(e);
+		}		
+	}
+	
+	public static void postLink(String link, Facebook fb) {
+		try {
+			fb.postLink(new URL(link));
+		} catch (MalformedURLException e) {
+			logger.error(e);
+		} catch (FacebookException e) {
+			logger.error(e);
+		}
+	}
+	
 	public static String savePostsToFile(String fileName, List<Post> posts) {
 		File file = new File(fileName + ".txt");
 
@@ -199,5 +219,5 @@ public class Utils {
 		}
         
         return file.getName();
-	}
+	}	
 }
