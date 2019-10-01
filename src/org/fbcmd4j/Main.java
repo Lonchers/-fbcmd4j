@@ -55,7 +55,7 @@ public class Main {
 						props = Utils.loadConfigFile(CONFIG_DIR, CONFIG_FILE);
 						break;
 					case 1:
-						System.out.println("Mostrar NewsFeed...");
+						System.out.println("Mostrando NewsFeed...");
 						ResponseList<Post> newsFeed = fb.getFeed();
 						for (Post p : newsFeed) {
 							Utils.printPost(p);
@@ -63,7 +63,12 @@ public class Main {
 						askToSaveFile("NewsFeed", newsFeed, scan);
 						break;
 					case 2:
-						System.out.println("Mostrar Wall...");
+						System.out.println("Mostrando Wall...");
+						ResponseList<Post> wall = fb.getPosts();
+						for (Post p : wall) {
+							Utils.printPost(p);
+						}		
+						askToSaveFile("Wall", wall, scan);
 						break;
 					case 3:
 						System.out.println("Escribe tu estado...");
