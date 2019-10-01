@@ -76,9 +76,7 @@ public class Main {
 						Utils.postStatus(estado, fb);
 						break;
 					case 4:
-						System.out.println("Ingresa el link: ");
-						String link = scan.nextLine();
-						Utils.postLink(link, fb);
+						System.out.println("Ingresa el link...");
 						break;
 					case 5:
 						System.out.println("Gracias por usar el cliente!");
