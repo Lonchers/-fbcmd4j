@@ -12,7 +12,7 @@ Cliente de Facebook en línea de comando para la evidencia del curso "**Computac
 
 ## Créditos
 Desarrollado por:
-- **2686599** David Elí Servín Peña
+Jorge Ramon De Leon Elizondo
 
 ## Licencia
-El código está disponible bajo la licencia **GNU GPL-3.0**. Consulte el archivo LICENSE en la raíz del proyecto para más información.
+El código está disponible bajo la licencia **MIT**. Consulte el archivo LICENSE en la raíz del proyecto para más información.
